@@ -10,13 +10,16 @@ package com.example.geekbang.spring.class4.example2;
  * @create: 2022-01-26 09:56
  */
 
-import com.example.geekbang.spring.class4.example3.example21.LightService;
+
+import com.example.geekbang.spring.class4.example1.LightService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 @Configuration
 public class BeanConfiguration {
     /*
     *修正方式:将 Bean 注解内 destroyMethod 属性设置为空
+    *  防止pring 容器 被销毁时自动调用@Bean对象中名为的 close 或者 shutdown 方法
+    * 注意：上一个@Service 来产生 Bean案例中不会出现上述情况
      */
     @Bean(destroyMethod="")
     public LightService getTransmission(){

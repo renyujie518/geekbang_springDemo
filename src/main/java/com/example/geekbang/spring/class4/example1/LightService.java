@@ -1,4 +1,4 @@
-package com.example.geekbang.spring.class4.example3.example21;
+package com.example.geekbang.spring.class4.example1;
 
 import org.springframework.stereotype.Service;
 

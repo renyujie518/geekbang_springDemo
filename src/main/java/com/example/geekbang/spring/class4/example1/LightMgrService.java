@@ -1,4 +1,4 @@
-package com.example.geekbang.spring.class4.example3.example21;
+package com.example.geekbang.spring.class4.example1;
 
 /**
  * @program: geekbang_springDemo
@@ -41,7 +41,7 @@ public class LightMgrService {
      *修复方式二:添加 init 方法，并且使用 PostConstruct 注解进行修饰
      */
     @Autowired
-    private com.example.geekbang.spring.class4.example3.example21.LightService lightService;
+    private LightService lightService;
 
     @PostConstruct
     public void init() {
