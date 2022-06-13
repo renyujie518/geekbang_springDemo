@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
  * @create: 2022-01-25 09:32
  */
 /*
-*修正方式:显式指明Bean名称
+*修正方式:显式指明Bean名称（建议此种做法，在写完服务配置@Repository时直接指定类名）
  */
 @Repository("CassandraDataService")
 @Slf4j

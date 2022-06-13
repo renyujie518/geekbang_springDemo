@@ -35,6 +35,7 @@ public class StudentController {
 
     /*
      *修正2:显式引用 Bean 时首字母忽略大小写
+     * @Qualifier 指定的名称去匹配 即精准匹配要注入哪个service实例
      */
     //@Autowired
     //@Qualifier("cassandraDataService")
@@ -62,6 +63,9 @@ public class StudentController {
     }
 
 
+    /**
+     * @description 源码中查看默认名的产生方法Introspector#decapitalize
+     */
     public static String decapitalize(String name) {
         if (name == null || name.length() == 0) {
             return name;

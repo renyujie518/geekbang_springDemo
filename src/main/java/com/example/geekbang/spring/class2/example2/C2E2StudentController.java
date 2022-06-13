@@ -22,12 +22,15 @@ public class C2E2StudentController {
     //@Autowired
     //@Qualifier("innerClassDataService")
     /*
-     *修正方式：使用类名.注入类名（首字母小写）
+     *修正方式：内部类引用的时候使用 类名.注入类名（首字母小写）
      */
     @Autowired
     @Qualifier("c2E2StudentController.InnerClassDataService")
     C2E2DataService innerClassDataService;
 
+    /**
+     * @description 定义一个内部类来 实现一种新的 DataService
+     */
     @Repository
     public static class InnerClassDataService implements C2E2DataService {
         @Override
