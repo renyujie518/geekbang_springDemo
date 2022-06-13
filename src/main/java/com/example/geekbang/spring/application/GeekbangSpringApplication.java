@@ -10,6 +10,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @SpringBootApplication
 @ComponentScan("com.example.geekbang.spring.class*.*")
+//第5课  将代理对象放入到 ThreadLocal 可以直接通过 AopContext.currentProxy() 的方式获取到当前的Proxy
 @EnableAspectJAutoProxy(exposeProxy = true)
 @ServletComponentScan("com.example.geekbang.spring.class*.*")
 @Slf4j

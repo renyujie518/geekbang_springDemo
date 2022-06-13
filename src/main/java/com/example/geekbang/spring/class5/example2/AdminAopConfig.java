@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * @program: geekbang_springDemo
- * @description: 案例 2：直接访问被拦截类的属性抛空指针异常
+ * @description: AOP用于日志记录
  * @author: gao wei
  * @create: 2022-01-27 09:44
  */
@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 @Service
 @Slf4j
 public class AdminAopConfig {
+    //管理员在登录时，记录一行日志以便于以后审计管理员操作
     @Before("execution(* com.example.geekbang.spring.class5.example2.AdminUserService.login(..)) ")
     public void logAdminLogin(JoinPoint pjp) throws Throwable {
         System.out.println("! admin login ...");

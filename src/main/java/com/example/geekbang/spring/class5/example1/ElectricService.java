@@ -28,10 +28,15 @@ public class ElectricService {
 //        this.pay();
         /*
          *修正方式一
+         * 被 @Autowired 注解的 ，是被动态代理创建出来的对象，才会被 Spring 增强，具备 AOP 该有的功能
+         * 所以自己引用自己
+         * @Autowired
+         * ElectricService electricService;
          */
        // electricService.pay();
         /*
          *问题修正方式二
+         *直接从 AopContext 获取当前的 Proxy。
          */
         //修改 EnableAspectJAutoProxy 注解的 exposeProxy 属性
         ElectricService electric = ((ElectricService) AopContext.currentProxy());

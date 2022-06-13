@@ -18,6 +18,8 @@ public class AdminUserService {
     }
     /*
      *修正方式一
+     * getAdminUser() 方法，从内部访问获取变量。
+     * 避免实例化类不会初始化类成员变量
      */
 
     public User getAdminUser() {

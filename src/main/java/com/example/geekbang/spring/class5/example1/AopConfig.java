@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 /**
  * @program: geekbang_springDemo
  * @description: 案例 1：this 调用的当前类方法无法被拦截
+ * 利用aop @Around 统计耗时
  * @author: gao wei
  * @create: 2022-01-26 10:27
  */
