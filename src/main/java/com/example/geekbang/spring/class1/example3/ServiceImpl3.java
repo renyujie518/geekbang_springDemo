@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 
 @Service
+//通知Spring把被注解的Bean变成多例
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 /**
  * 设置多例
