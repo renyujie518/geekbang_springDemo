@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 /**
  * @program: geekbang_springDemo
  * @description: 案例 1：试图处理并不会抛出的事件
+ * 定义一个监听器  期初视图在spring启动的时候拦截 ContextStartedEvent（后验证这个事件在启动时不抛出）
+ * 后来发现ContextRefreshedEvent事件是在启动时真正抛出的
  * @author: gao wei
  * @create: 2022-01-27 11:25
  */

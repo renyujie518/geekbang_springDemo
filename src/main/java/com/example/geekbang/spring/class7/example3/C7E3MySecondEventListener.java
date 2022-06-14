@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 /**
  * @program: geekbang_springDemo
  * @description: 案例 3：部分事件监听器失效
+ * 正常的监听器（优先级低）
  * @author: gao wei
  * @create: 2022-01-27 13:36
  */

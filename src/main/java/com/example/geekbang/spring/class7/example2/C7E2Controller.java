@@ -19,6 +19,11 @@ public class C7E2Controller {
     @Autowired
     private AbstractApplicationContext applicationContext;
 
+    /**
+     * @description 修正2
+     * 直接去调用 AbstractApplicationContext#start 方法（执行所有 Lifecycle Bean 的启动方法）
+     * 该方法里会抛出ContextStartedEvent事件
+     */
     @RequestMapping(path = "c7/e2/publishEvent", method = RequestMethod.GET)
     public String notifyEvent(){
         applicationContext.start();

@@ -7,6 +7,9 @@ import org.springframework.stereotype.Component;
 /**
  * @program: geekbang_springDemo
  * @description: 案例 1：错乱混合不同类型的增强
+ * 写一个 Lifecycle Bean（真实作用：实现运行中的启停）
+ * 只要执行了 AbstractApplicationContext 的 start()， 如执行C7E2Controller#notifyEvent
+ * 就会输出日志lifecycle start
  * @author: gao wei
  * @create: 2022-01-27 12:44
  */

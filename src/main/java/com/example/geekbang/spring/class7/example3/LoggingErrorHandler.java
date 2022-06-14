@@ -7,6 +7,7 @@ import org.springframework.util.ErrorHandler;
 /**
  * @program: geekbang_springDemo
  * @description: 最终事件的执行是由同一个线程按顺序来完成的，任何一个报错，都会导致后续的监听器执行不了。
+ * 设我们设置了一个 ErrorHandler，那么就可以用这个 ErrorHandler 去处理掉异常，从而保证后续事件监听器处理不受影响
  * @author: gao wei
  * @create: 2022-01-27 13:54
  */

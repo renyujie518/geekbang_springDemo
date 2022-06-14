@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 /**
  * @program: geekbang_springDemo
  * @description: 案例 2：监听事件的体系不对
+ * 试图监听到ApplicationEnvironmentPreparedEvent
  * @author: gao wei
  * @create: 2022-01-27 12:48
  */

@@ -12,6 +12,7 @@ import java.util.UUID;
 /**
  * @program: geekbang_springDemo
  * @description: 案例 3：部分事件监听器失效
+ * 自定义事件发送者
  * @author: gao wei
  * @create: 2022-01-27 13:40
  */

@@ -10,6 +10,7 @@ import java.util.Random;
 /**
  * @program: geekbang_springDemo
  * @description: 案例 3：部分事件监听器失效
+ * 优先级高，且执行过程中会有 50% 的概率抛出异 常导致监听失败
  * @author: gao wei
  * @create: 2022-01-27 13:34
  */
