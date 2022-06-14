@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @program: geekbang_springDemo
  * @description: 案例 2：错误使用 @RequestParam、@PathVarible 等注解
+ * 必须显式在 @RequestParam 中指定请求参数 名。（@PathVarible同理）
  * @author: gao wei
  * @create: 2022-01-27 15:38
  */
@@ -25,8 +26,9 @@ public class C9E2Controller {
         return name;
     }
 
-    ;
-
+    /**
+     * @description 正确用法
+     */
     @RequestMapping(path = "/hi2/test2", method = RequestMethod.GET)
     public String hi2(@RequestParam String name) {
         return name;

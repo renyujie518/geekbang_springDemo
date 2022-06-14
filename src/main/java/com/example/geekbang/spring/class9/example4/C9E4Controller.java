@@ -21,6 +21,9 @@ import java.util.Date;
 @Slf4j
 public class C9E4Controller {
 
+    /**
+     * @description age 可以被直接定义为 int 这种基本类型（Integer 也可以），而不是必须是 String 类型。
+     */
     @RequestMapping(path = "/hi5", method = RequestMethod.GET)
     public String hi5(@RequestParam("name") String name, @RequestParam("age") int age) {
         return name + " is " + age + " years old";
@@ -28,7 +31,10 @@ public class C9E4Controller {
 
     /*
      * http://localhost:8080/hi6?date=2021-5-1%2020:26:53
-     * 修正方式一： http://localhost:8080/hi6?date=Sat, 12 Aug 1995 13:30:00 GMT
+     * Spring 并不能完成 转化
+     * 返回错误码 400，错误信息为"Failed to convert value of type 'java.lang.String' to required type 'java.util.Date"。
+     * 修正方式一：使用 Date 构造器支持的格式
+     * http://localhost:8080/hi6?date=Sat, 12 Aug 1995 13:30:00 GMT
      */
     @RequestMapping(path = "/hi6", method = RequestMethod.GET)
     public String hi6(@RequestParam("date") Date date) {

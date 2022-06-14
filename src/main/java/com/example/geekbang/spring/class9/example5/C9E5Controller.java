@@ -20,6 +20,11 @@ import java.util.Arrays;
 public class C9E5Controller {
 
 
+    /**
+     * @description GET http://localhost:8080/c9/e5/hi2?name=xiaoming&name=hanmeimei
+     * 类似这种有多个name的，可以使用String[]完成接收 结果为 [xiaoming, hanmeimei]
+     * （比直接用String接收后的结果  xiaoming,hanmeimei  好，否则还要split再取）
+     */
     @RequestMapping(path = "/c9/e5/hi2", method = RequestMethod.GET)
     public String hi2(@RequestParam("name") String[] name){
         return Arrays.toString(name);

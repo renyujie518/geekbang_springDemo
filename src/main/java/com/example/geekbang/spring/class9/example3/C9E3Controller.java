@@ -22,7 +22,9 @@ import java.util.Optional;
 public class C9E3Controller {
 
     /*
-     * 问题出现：http://localhost:8080/hi4?name=xiaoming
+     *在访问  http://localhost:8080/hi4?name=xiaoming&address=beijing 时并不会出问题
+     * 仅仅使用 name 做请求 问题出现：http://localhost:8080/hi4?name=xiaoming
+     * 返回错误码 400，提示请求格式错误：此处缺少 address 参数。
      */
     @RequestMapping(path = "/hi4", method = RequestMethod.GET)
     public String hi4(@RequestParam("name") String name, @RequestParam("address") String address) {
@@ -39,7 +41,7 @@ public class C9E3Controller {
     }
 
     /*
-     *修正方式二：设置 @RequestParam 的 required 值
+     *修正方式二：设置 @RequestParam 的 required 值  默认是true
      */
     @RequestMapping(path = "/hi4/modify2", method = RequestMethod.GET)
     public String hi4M2(@RequestParam("name") String name, @RequestParam(value = "address", required = false) String address) {
