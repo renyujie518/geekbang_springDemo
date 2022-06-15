@@ -13,8 +13,9 @@ import javax.servlet.http.HttpServletResponse;
  * @create: 2022-01-27 17:01
  */
 public class C9E3Controller {
-    /*
+    /*  自定义自定义常用头（本案例是"Content-Type"）失效
      * http://localhost:8080/c9/e3/hi3
+     * 修正方式  主动显式指明类型 即 produces = {"application/json"} 只返回一个指明的类型了
      */
     @RequestMapping(path = "/c9/e3/hi3", method = RequestMethod.GET, produces = {"application/json"})
     public String hi3(HttpServletResponse httpServletResponse) {
