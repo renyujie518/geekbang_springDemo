@@ -15,8 +15,11 @@ import javax.servlet.http.HttpServletResponse;
  * @author: gao wei
  * @create: 2022-02-07 11:49
  */
-/*
- *情况复现
+
+
+
+/**
+ * @description 限制特定 IP 地址段（例如校园网内）的用户方可注册为新用户
  */
 //@WebFilter(urlPatterns = { "/c14/e1/*" })
 //@Order(2)
@@ -34,6 +37,7 @@ public class C14E1AuthFilter implements Filter {
         }
     }
 
+    //仅仅 Sleep 1 秒来模拟这个过程
     private boolean isPassAuth() throws InterruptedException {
         System.out.println("执行检查权限");
         Thread.sleep(1000);

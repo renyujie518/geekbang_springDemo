@@ -11,6 +11,11 @@ import org.springframework.context.annotation.Configuration;
  * @create: 2022-02-07 21:34
  */
 
+/**
+ * @description 修复方法
+ * 实现自己的 FilterRegistrationBean 来配置添加过 滤器，不再使用 @WebFilter。
+ * 即手工实例化了 FilterRegistrationBean 实例（覆盖默认的），而且设置了其 setOrder()。
+ */
 @Configuration
 public class C14E1FilterConfiguration {
     @Bean

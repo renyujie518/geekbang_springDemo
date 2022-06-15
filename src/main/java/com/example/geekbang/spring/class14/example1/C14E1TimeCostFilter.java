@@ -11,8 +11,12 @@ import java.io.IOException;
  * @author: gao wei
  * @create: 2022-02-07 11:49
  */
-/*
- *情况复现
+
+
+/**
+ * @description 计算注册学生的执行耗时，需要包括授权过程。
+ * 原本使用了 @Order，期望 TimeCostFilter 先被执行，
+ * 因为 TimeCostFilter 设计的初衷是统计这个controlle接口的性能，所以是需要统计 AuthFilter 执行的授 权过程的。
  */
 //@WebFilter(urlPatterns = { "/c14/e1/*" })
 //@Order(1)
