@@ -30,7 +30,8 @@ public class C12E1Controller {
     }
 
     /*
-    *修正方式一：标记 @Validated
+    实例进行校验，必须匹配下面两个条件的其中之一:1Validated 注解 2 标记了其他类型的注解，且注解名称以 Valid 关键字开头
+    *修正方式一：标记 @Validated   (org.springframework.validation.annotation.Validated)
      */
     @RequestMapping(path = "/c12/e1/students/1", method = RequestMethod.POST)
     public void addStudent1(@Validated @RequestBody C12E1Student student){
@@ -38,7 +39,7 @@ public class C12E1Controller {
         //省略业务代码
     }
     /*
-     *修正方式二：标记 @Valid 关键字开头的注解
+     *修正方式二：标记 @Valid 关键字开头的注解  (javax.validation.Valid)
      */
     @RequestMapping(path = "/c12/e1/students/2", method = RequestMethod.POST)
     public void addStudent2(@Valid @RequestBody C12E1Student student){

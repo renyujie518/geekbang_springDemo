@@ -15,6 +15,7 @@ import javax.validation.constraints.Size;
 @Data
 public class C12E3Student {
     @Size(min = 1, max = 10)
+    //@NotNull 或 @NotEmpty）来加强不能为null的约束
     @NotEmpty
     private String name;
     private short age;

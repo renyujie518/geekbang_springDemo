@@ -12,6 +12,7 @@ import javax.validation.constraints.Size;
  */
 @Data
 public class C12E1Student {
+    //最大为 10 字节），以拦截姓 名过长、不符合“常情”的学生信息的添加。
     @Size(max = 10)
     private String name;
     private short age;

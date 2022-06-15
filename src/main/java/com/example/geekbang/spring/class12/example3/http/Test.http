@@ -1,6 +1,6 @@
 
 ### 案例 3：误解校验执行
-### 情况1
+### 情况1  使用""可以
 POST http://localhost:8080/c12/e3/students
 Content-Type: application/json
 
@@ -11,7 +11,7 @@ Content-Type: application/json
   "phone": {"number":"12306"}
 }
 
-### 情况2
+### 情况2   除 name 字段  即null  校验失败
 POST http://localhost:8080/c12/e3/students
 Content-Type: application/json
 
