@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @Slf4j
 public class C13E1StudentController {
+
     @PostMapping("/c13/e1/regStudent/{name}")
     @ResponseBody
     public String saveUser(String name) throws Exception {
