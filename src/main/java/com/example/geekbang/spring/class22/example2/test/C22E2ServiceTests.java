@@ -6,7 +6,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 
 /**
  * @program: geekbang_springDemo
- * @description: 案例 2：容易出错的 Mock
+ * @description: 把相关的 MockBean 都定义到一个地方去
  * @author: gao wei
  * @create: 2022-02-10 09:24
  */
