@@ -3,6 +3,7 @@ package com.example.geekbang.spring.class15.example1;
 /**
  * @program: geekbang_springDemo
  * @description: 案例 1：遗忘 PasswordEncoder
+ *而一旦使用了新版 本，则必须要提供一个 PasswordEncoder。
  * @author: gao wei
  * @create: 2022-02-07 21:54
  */

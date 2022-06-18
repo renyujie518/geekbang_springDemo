@@ -1,8 +1,15 @@
 package com.example.geekbang.spring.class15.example2;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import java.util.Collection;
+import java.util.Objects;
+
 /**
  * @program: geekbang_springDemo
  * @description: 案例 2：ROLE_ 前缀与角色
+ * 权限控制类 模拟授权时的角色相关控制
  * ROLE_ 前缀在 Spring Security 前缀中非常重要。
  * @author: gao wei
  * @create: 2022-02-07 21:54
@@ -26,6 +33,12 @@ package com.example.geekbang.spring.class15.example2;
 //        };
 //    }
 //
+//    /**
+//     * @description
+//     * 用户 fujian：角色为 USER
+//     * 用户 admin1：角色为 ADMIN
+//     * 用户 admin2：角色为 ADMIN   注意在给admin1，2添加角色的时候用了两种方式
+//     */
 //    @Override
 //    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 //        auth.inMemoryAuthentication()
@@ -37,8 +50,12 @@ package com.example.geekbang.spring.class15.example2;
 //                    @Override
 //                    public Collection getAuthorities() {
 //                        /*
-//                         *问题复现:将ROLE_ADMIN改为ADMIN后admin2账号无法登陆
+//                         *问题复现:将ROLE_ADMIN改为ADMIN后
+//                         * admin1 可以登录，而 admin2 设置了同样的角色却不可以登陆
+//                         * 问题修正
+//                         * ROLE_ 前缀在 Spring Security 前缀中非常 重要 在添加 admin2 时，给角色添加上 ROLE_ 前缀即可
 //                         */
+//                        //return Arrays.asList(new SimpleGrantedAuthority("ADMIN"));
 //                        return Arrays.asList(new SimpleGrantedAuthority("ROLE_ADMIN"));
 //                    } //省略其他非关键“实现”方法
 //
