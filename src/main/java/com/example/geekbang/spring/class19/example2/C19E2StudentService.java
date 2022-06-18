@@ -19,6 +19,7 @@ public class C19E2StudentService {
     @Autowired
     private C19E1StudentMapper studentMapper;
 
+    /** 自动装配了自身来完成代理方法的调用  防止直接通过类的内部调用或者通过 this 的方式调用**/
     @Autowired
     private C19E2StudentService c19E2StudentService;
 

@@ -11,7 +11,8 @@ import javax.sql.DataSource;
 
 /**
  * @program: geekbang_springDemo
- * @description:
+ * @description: JDBC 的配置类，从 jdbc.properties 加载相关配置项
+ * 并创建 JdbcTemplate、 DataSource、TransactionManager 相关的 Bean 等。
  * @author: gao wei
  * @create: 2022-02-09 11:45
  */

@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 /**
  * @program: geekbang_springDemo
  * @description:
+ * 应用配置类，通过注解的方式，配置了数据源、MyBatis Mapper 的扫描路径以及事务 等
  * @author: gao wei
  * @create: 2022-02-09 11:46
  */
