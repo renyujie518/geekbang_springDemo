@@ -12,7 +12,7 @@ import java.lang.reflect.Method;
 
 /**
  * @program: geekbang_springDemo
- * @description: 案例 2：多数据源间切换之谜
+ * @description: Spring AOP 来对相应的服务方法进行拦截，完成数据源的切换 操作
  * 这里要加上一个 @Order(1) 标记它的初始化顺序。这个 Order 值一定要比事务的 AOP 切面的值小，
  * 这样可以获得更高的优先级，否则自动切换数据源将会失效。
  * @author: gao wei
@@ -30,6 +30,7 @@ public class DataSourceSwitch {
         Method method = methodSignature.getMethod();
         if (method.isAnnotationPresent(DataSource.class)) {
             DataSource dataSource = method.getAnnotation(DataSource.class);
+            //这里真正执行了setDataSource
             MyDataSource.setDataSource(dataSource.value());
             System.out.println("数据源切换至：" + MyDataSource.getDatasource());
         }

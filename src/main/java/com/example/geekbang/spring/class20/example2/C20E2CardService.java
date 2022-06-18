@@ -18,6 +18,11 @@ public class C20E2CardService {
     @Autowired
     private C20E2CardMapper C20E2CardMapper;
 
+    /**
+     * @description 假设新需求
+     * 每个学 生注册的时候，需要给他们发一张校园卡，并给校园卡里充入 50 元钱。
+     * 但是这个校园卡管 理系统是一个第三方系统，使用的是另一套数据库
+     */
     @Transactional(propagation = Propagation.REQUIRES_NEW)
     @DataSource(DataSource.card)
     public void createCard(int studentId) throws Exception {

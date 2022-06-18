@@ -104,6 +104,7 @@ public class C20JdbcConfig {
         Map map = new HashMap<>();
         map.put("core", dataSourceCore);
         map.put("card", dataSourceCard);
+        //往多源数据配置类中设置目标和默认数据源
         myDataSource.setTargetDataSources(map);
         myDataSource.setDefaultTargetDataSource(dataSourceCore);
         return myDataSource;

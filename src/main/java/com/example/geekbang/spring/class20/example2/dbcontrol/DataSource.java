@@ -3,12 +3,9 @@ package com.example.geekbang.spring.class20.example2.dbcontrol;
 import java.lang.annotation.*;
 
 /**
- * @program: geekbang_springDemo
- * @description: 案例 2：多数据源间切换之谜
- * @author: gao wei
- * @create: 2022-02-09 15:06
+ * @description 把配置的数据源类型都设置成注解标签，
+ * Service 层中 在切换数据源的方法上加上注解标签，就会调用相应的方法切换数据源
  */
-
 @Documented
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)

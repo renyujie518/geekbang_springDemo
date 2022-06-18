@@ -28,6 +28,7 @@ public class C20E2StudentService {
         student.setRealname(realname);
         int studentId = c20E2StudentService.doSaveStudent(student);
         try {
+            //学生注册和发卡都要在一个事务里完成 在一个事务里完成对两个数据源的操作
             c20E2CourseService.regCourse(studentId);
             c20E2CardService.createCard(studentId);
         } catch (Exception e) {
