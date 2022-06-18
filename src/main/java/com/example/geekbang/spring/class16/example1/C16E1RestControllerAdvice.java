@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 /**
  * @program: geekbang_springDemo
- * @description: 案例 1：小心过滤器异常
+ * @description: 检验不通过的异常处理器（返回 一个 403 的 resultCode）
  * @author: gao wei
  * @create: 2022-02-08 10:13
  */
