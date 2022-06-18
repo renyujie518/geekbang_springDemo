@@ -16,15 +16,18 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @Slf4j
 public class GeekbangSpringApplication {
     /**
-     * Class 18
+     * 18课 注意读与取的一致性
+     * 问题修复  读取使用相同的 RedisTemplate
      * @param redisTemplate
      * @param stringRedisTemplate
      */
     //void SpringdataApplication(RedisTemplate redisTemplate, StringRedisTemplate stringRedisTemplate) {
     //    String key = "mykey";
     //    stringRedisTemplate.opsForValue().set(key, "myvalue");
+    //    //使用stringRedisTemplate
     //    Object valueGotFromStringRedisTemplate = stringRedisTemplate.opsForValue().get(key);
     //    System.out.println(valueGotFromStringRedisTemplate);
+    //    //使用RedisTemplate（取不到对应数据）
     //    Object valueGotFromRedisTemplate = redisTemplate.opsForValue().get(key);
     //    System.out.println(valueGotFromRedisTemplate);
     //}
