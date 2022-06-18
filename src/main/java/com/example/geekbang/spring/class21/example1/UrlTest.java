@@ -15,12 +15,12 @@ public class UrlTest {
 
         RestTemplate template = new RestTemplate();
 
-        //错误：
+        //错误：返回提示 400 错误，即请求出错
         //Map<String, Object> paramMap = new HashMap<String, Object>();
         //paramMap.put("para1", "001");
         //paramMap.put("para2", "002");
 
-        //修正代码：
+        //修正代码：使用 RestTemplate 提交表单必须是 MultiValueMap
         MultiValueMap<String, Object> paramMap = new LinkedMultiValueMap<String, Object>();
         paramMap.add("para1", "001");
         paramMap.add("para2", "002");
